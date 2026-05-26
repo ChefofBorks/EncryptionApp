@@ -13,6 +13,8 @@ namespace EncryptionApp.Commands
             var textArgument   = StaticHelpers.TextArgument("Text to encrypt");
             var command        = StaticHelpers.GetCommand("encrypt", "Encrypt text");
 
+            command.Aliases.Add("-e");
+
             command.Arguments.Add(textArgument);
 
             command.SetAction(parseResult =>
